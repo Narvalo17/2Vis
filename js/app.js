@@ -10,3 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function displayClientForm() {
+    document.getElementById('clientForm').style.display = 'block';
+    document.getElementById('professionnelleForm').style.display = 'none';
+}
+
+function displayProfessionnelleForm() {
+    document.getElementById('professionnelleForm').style.display = 'block';
+    document.getElementById('clientForm').style.display = 'none';
+}
+
+document.getElementById('userInput').addEventListener('input', function() {
+    var selectedValue = this.value.toLowerCase();
+    
+    if (selectedValue === 'client') {
+        displayClientForm();
+    } else if (selectedValue === 'professionnelle') {
+        displayProfessionnelleForm();
+    }
+});
+
