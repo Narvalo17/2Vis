@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription a 2Vis</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Inscription à 2Vis</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,76 +13,94 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="service.html">Services</a></li>
-                <li><a href="#">S'inscrire</a></li>
+                <li><a href="inscription.html">S'inscrire</a></li>
                 <li><a href="s'identifier.html">S'identifier</a></li>
             </ul>
         </nav>
     </header>
 <main>
-         <section class="content">
+    <section class="content">
         <h2>Formulaire d'Inscription</h2>
-        <form action="#" method="post">
+        <form id="inscriptionForm" action="#" method="post">
             <div>
                 <label for="user">Vous êtes :</label>
-                <input list="user" name="user" placeholder="Votre choix">
-                    <datalist id="user">
-                        <option value=" client"></option>
-                        <option value=" pro"></option>
-                    </datalist>
-                
+                <input list="user" id="userInput" name="user" placeholder="Client/Professionnelle">
+                <datalist id="user">
+                    <option value="Client"></option>
+                    <option value="Professionnelle"></option>
+                </datalist>
             </div>
-            <div>
+            <div id="clientForm" style="display: none;">
+                
                 <label for="nom">Veuillez saisir votre nom :</label>
                 <input type="text" id="nom" name="nom" placeholder="Nom" required>
-            </div>
-            <div>
-                <label for="prenom">Veuillez saisir votre prénom :</label>
-                <input type="text" id="prenom" name="prenom"placeholder="Prénom" required>
-            </div>
-            <div>
+
+                <label for="nom">Veuillez saisir votre prénom :</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+
                 <label for="email">Veuillez saisir votre E-mail :</label>
                 <input type="email" id="email" name="email"placeholder="exemple@gmail.com" required>
-            </div>
-            <div>
+
                 <label for="password">Veuillez saisir votre mot de passe :</label>
                 <input type="password" id="password" name="password"placeholder="********" required>
-            </div>
-            <div>
+
                 <label for="confirmation">Veuillez confirmer votre mot de passe :</label>
                 <input type="password" id="confirmation" name="confirmation"placeholder="********" required>
             </div>
-            <div>
-                <label for="adresse">Veuillez saisir votre adresse :</label>
-                <input type="text" id="adresse" name="adresse"placeholder="01 rue 'xy' batiment 'x' apartement 'y'" required>
-            </div>
-            <div>
-                <label for="code_postal">Veuillez saisir votre code Postal :</label>
-                <input type="text" id="code_postal" name="code_postal"placeholder="xxxxx" required>
-            </div>
+                
+            <div id="professionnelleForm" style="display: none;">
+                
+                <label for="nom">Veuillez saisir votre nom :</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+
+                <label for="prenom">Veuillez saisir votre prénom :</label>
+                <input type="text" id="prenom" name="prenom"placeholder="Prénom" required>
+
+                <label for="email">Veuillez saisir votre E-mail :</label>
+                <input type="email" id="email" name="email"placeholder="exemple@gmail.com" required>
+
+                <label for="email">Raison Social :</label>
+                <input type="text" id="Raison" name="raison"placeholder="Raison social" required>
+
+                <label for="siret">Numéro de SIRET :</label>
+                <input type="text" id="siret" name="siret" placeholder="XXXXXXXXXXXXXX" maxlength="14" pattern="[0-9]{14}" title="Le numéro de SIRET doit contenir 14 chiffres" required>
+
+                <label for="password">Veuillez saisir votre mot de passe :</label>
+                <input type="password" id="password" name="password"placeholder="********" required>
            
+                <label for="confirmation">Veuillez confirmer votre mot de passe :</label>
+                <input type="password" id="confirmation" name="confirmation"placeholder="********" required>
+                
+            </div>
+
                 <input type="checkbox" id="conditions" name="conditions" required>
                 <a href="condition.html" class="branch-name" target="blank">J'accepte les conditions d'utilisation</a>
-           
+            
+                
+            
             <button type="submit">S'inscrire</button>
         </form>
     </section>
 </main>
    
-    <footer> 
-        &copy; -2024- Mansouri Youcef -2Vis- Tout droit reserver 
-        <p>
-            <a href="apropos.html"> A propos de nous - </a>
-            <a href="contact.html"> Nous contacter - </a> 
-            <a href="condition.html">Conditions d'utilisation</a>        
-        </p>     
-        <p>
-            <img src="./asset/FB.jpg" alt="FB" class="logo">
-            <img src="./asset/Insta.jpg" alt="Insta" class="logo">
-            <img src="./asset/tiktok.jpg" alt="tiktok" class="logo">
-            <img src="./asset/linkedin.jpg" alt="linkedin" class="logo">
-            <img src="./asset/twitter.jpg" alt="twitter" class="logo">
-            
-        </p>
-    </footer>
+<footer>  
+    &copy; -2024- Mansouri Youcef -2Vis- Tout droit reserver
+    <p>
+       <a href="apropos.html"> A propos de nous - </a>
+       <a href="contact.html"> Nous contacter - </a> 
+       <a href="condition.html">Conditions d'utilisation</a>        
+   </p> 
+   <p>
+       Retrouvez nous sur : 
+       <img src="./asset/FB.jpg" alt="FB" class="logo">
+       <img src="./asset/Insta.jpg" alt="Insta" class="logo">
+       <img src="./asset/tiktok.jpg" alt="tiktok" class="logo">
+       <img src="./asset/linkedin.jpg" alt="linkedin" class="logo">
+       <img src="./asset/twitter.jpg" alt="twitter" class="logo">
+   </p>
+</footer>
+<script type="module" src="./js/app.js"></script>
+
+
 </body>
 </html>
