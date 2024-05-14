@@ -20,6 +20,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const response = await axios.post(`${BASE_URL}${PORT}${USER_ENDPOINT}${LOGIN}`, {
             ...formData
         });
+        
     // ici rediriger vers la page d'accueil
         console.log('Réponse du serveur :', response.data);
       } catch (error) {

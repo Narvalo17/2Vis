@@ -1,8 +1,8 @@
 import { BASE_URL,PORT, PRO_ENDPOINT, USER_ENDPOINT } from "./constantes.js"
 
 document.getElementById('userInput').addEventListener('change', function() {
-    var user = this.value;
-    if (user === 'Professionnelle') {
+    let user = this.value;
+    if (user === 'Professionnel') {
         document.getElementById('professionnelleForm').style.display = 'block';
     } else {
         document.getElementById('professionnelleForm').style.display = 'none';
@@ -53,5 +53,6 @@ document.getElementById('inscriptionForm').addEventListener('submit', async func
         console.error('Erreur lors de la requête :', error);
       }
     });
+    
 
 
