@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription à 2Vis</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,69 +15,49 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="inscription.html">S'inscrire</a></li>
-                <li><a href="s'identifier.html">S'identifier</a></li>
+                <li><a href="connexion.html">connexion</a></li>
             </ul>
         </nav>
     </header>
 <main>
     <section class="content">
         <h2>Formulaire d'Inscription</h2>
-        <form id="inscriptionForm" action="#" method="post">
+        <form id="inscriptionForm">
             <div>
                 <label for="user">Vous êtes :</label>
-                <input list="user" id="userInput" name="user" placeholder="Client/Professionnelle">
-                <datalist id="user">
-                    <option value="Client"></option>
-                    <option value="Professionnelle"></option>
-                </datalist>
+                <select id="userInput" name="user">
+                    <option value="Client">Particulier</option>
+                    <option value="Professionnel">Professionnel</option>
+                </select>
             </div>
-            <div id="clientForm" style="display: none;">
-                
-                <label for="nom">Veuillez saisir votre nom :</label>
+            <div id="clientForm">
+                <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" placeholder="Nom" required>
 
-                <label for="nom">Veuillez saisir votre prénom :</label>
-                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
 
-                <label for="email">Veuillez saisir votre E-mail :</label>
-                <input type="email" id="email" name="email"placeholder="exemple@gmail.com" required>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
 
-                <label for="password">Veuillez saisir votre mot de passe :</label>
-                <input type="password" id="password" name="password"placeholder="********" required>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="********" required>
 
-                <label for="confirmation">Veuillez confirmer votre mot de passe :</label>
-                <input type="password" id="confirmation" name="confirmation"placeholder="********" required>
+                <label for="confirmation">Confirmer le mot de passe :</label>
+                <input type="password" id="confirmation" name="confirmation" placeholder="********" required>
             </div>
                 
             <div id="professionnelleForm" style="display: none;">
-                
-                <label for="nom">Veuillez saisir votre nom :</label>
-                <input type="text" id="nom" name="nom" placeholder="Nom" required>
 
-                <label for="prenom">Veuillez saisir votre prénom :</label>
-                <input type="text" id="prenom" name="prenom"placeholder="Prénom" required>
-
-                <label for="email">Veuillez saisir votre E-mail :</label>
-                <input type="email" id="email" name="email"placeholder="exemple@gmail.com" required>
-
-                <label for="email">Raison Social :</label>
-                <input type="text" id="Raison" name="raison"placeholder="Raison social" required>
+                <label for="raison">Raison Sociale :</label>
+                <input type="text" id="raison" name="raison" placeholder="Raison sociale">
 
                 <label for="siret">Numéro de SIRET :</label>
-                <input type="text" id="siret" name="siret" placeholder="XXXXXXXXXXXXXX" maxlength="14" pattern="[0-9]{14}" title="Le numéro de SIRET doit contenir 14 chiffres" required>
-
-                <label for="password">Veuillez saisir votre mot de passe :</label>
-                <input type="password" id="password" name="password"placeholder="********" required>
-           
-                <label for="confirmation">Veuillez confirmer votre mot de passe :</label>
-                <input type="password" id="confirmation" name="confirmation"placeholder="********" required>
-                
+                <input type="text" id="siret" name="siret" placeholder="XXXXXXXXXXXXXX" maxlength="14" pattern="[0-9]{14}" title="Le numéro de SIRET doit contenir 14 chiffres">
             </div>
 
-                <input type="checkbox" id="conditions" name="conditions" required>
-                <a href="condition.html" class="branch-name" target="blank">J'accepte les conditions d'utilisation</a>
-            
-                
+            <input type="checkbox" id="conditions" name="conditions" required>
+            <label for="conditions">J'accepte les conditions d'utilisation</label>
             
             <button type="submit">S'inscrire</button>
         </form>
@@ -99,7 +80,8 @@
        <img src="./asset/twitter.jpg" alt="twitter" class="logo">
    </p>
 </footer>
-<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/inscription.js"></script>
+
 
 
 </body>
